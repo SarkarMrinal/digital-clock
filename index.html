@@ -2,15 +2,106 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Digital Clock</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>New Tab</title>
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="container">
-      <div id="clock"></div>
-    </div>
+    <header>
+      <div class="header-content">
+        <div id="welcome-message"></div>
+        <div id="date-time"></div>
+      </div>
+    </header>
+    <main>
+        <section id="search-section">
+            <div class="search-container">
+              <form id="search-form" action="https://www.google.com/search" method="get">
+                <input type="text" id="search-input" name="q" placeholder="Search Google" autocomplete="off">
+                <button type="submit" id="search-button">
+                  <i class="fas fa-search"></i>
+                </button>
+                <button type="button" id="voice-search-button">
+                  <i class="fas fa-microphone"></i>
+                </button>
+              </form>
+            </div>
+          </section>
+
+      <section id="quick-links">
+        <h2>Quick Links</h2>
+        <div class="links-grid">
+          <a href="https://www.youtube.com" class="link-item">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain_url=youtube.com" alt="YouTube">
+            <span class="link-name">YouTube</span>
+          </a>
+          <a href="https://www.gmail.com" class="link-item">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain_url=mail.google.com" alt="Gmail">
+            <span class="link-name">Gmail</span>
+          </a>
+          <a href="https://www.github.com" class="link-item">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain_url=github.com" alt="GitHub">
+            <span class="link-name">GitHub</span>
+          </a>
+          <a href="https://www.linkedin.com" class="link-item">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain_url=linkedin.com" alt="LinkedIn">
+            <span class="link-name">LinkedIn</span>
+          </a>
+        </div>
+      </section>
+
+      <section id="widgets">
+        <div class="widget-container">
+          <div class="widget" id="todo-widget">
+            <div class="widget-header">
+              <h3>To-Do List</h3>
+              <button class="collapse-btn">
+                <i class="fas fa-chevron-down"></i>
+              </button>
+            </div>
+            <div class="widget-content">
+                <p>To-Do content</p>
+            </div>
+          </div>
+
+          <div class="widget" id="weather-widget">
+            <div class="widget-header">
+              <h3>Weather</h3>
+              <button class="collapse-btn">
+                <i class="fas fa-chevron-down"></i>
+              </button>
+            </div>
+            <div class="widget-content">
+              <p>Weather content</p>
+            </div>
+          </div>
+          <div class="widget" id="calendar-widget">
+            <div class="widget-header">
+              <h3>Calendar</h3>
+              <button class="collapse-btn">
+                <i class="fas fa-chevron-down"></i>
+              </button>
+            </div>
+            <div class="widget-content">
+              <p>Calendar content</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div id="quote-of-the-day"></div>
+            <div id="dark-mode-toggle">
+              <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </div>
+          </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/c06b659c31.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
   </body>
 </html>
